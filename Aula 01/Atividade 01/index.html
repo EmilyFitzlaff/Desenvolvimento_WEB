@@ -15,7 +15,7 @@
                     <li><a href="#visao-geral">Visão Geral</a></li>
                     <li><a href="#instalacao">Instalação</a></li>                
                     <li><a href="#vinculando-github">Vinculando ao GITHUB</a></li>
-                    <li><a href="#comandos-iniciais">Comandos Iniciais</a></li>
+                    <li><a href="#comandos-basicos">Comandos Iniciais</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,8 +47,75 @@
             </article>
 
             <article>
-                <h2 id="comandos-iniciais">Comandos Iniciais</h2>
+                <h2 id="comandos-basicos">Comandos Básicos</h2>
 
+                <h3>Ajuda</h3>
+                <p>Serve para obter ajuda sobre as funcionalidades de cada comando.</p>
+                <p>Como utilizar:</p>
+                <code>
+                    git help add <br>
+                    git help commit <br>
+                    git help &lt;qualque_comando_git&gt;
+                </code>
+
+                <h3>Configuração Geral</h3>
+                <p>Para setar um usuário:</p>
+                <code>
+                    git config --global user.name "Emily Fitzlaff"
+                </code>
+
+                <p>Para setar um e-mail:</p>
+                <code>
+                    git config --global user.email fitzlaff.emily@unidavi.edu.br
+                </code>
+
+                <p>Listar configurações:</p>
+                <code>
+                    git config --list
+                </code>
+
+                <h3>Repositório Local</h3>
+                <p>Criar um novo repositório:</p>
+                <code>
+                    git init
+                </code>
+
+                <p>Adicionar um arquivo/diretório específico:</p>
+                <code>
+                    git add index.html
+                </code>
+
+                <p>Adicionar todos os arquivos/diretórios:</p>
+                <code>
+                    git add .
+                </code>
+
+                <p>Adicionar um diretório específico:</p>
+                <code>
+                    git add meu_diretorio
+                </code>
+
+                <h3>Commitar arquivo/diretório</h3>
+                <p>Comitar um arquivo</p>
+                <code>
+                    git commit meu_arquivo.txt
+                </code>
+
+                <p>Comitar vários arquivos</p>
+                <code>
+                    git commit meu_arquivo.txt meu_outro_arquivo.txt
+                </code>
+
+                <p>Comitar informando mensagem</p>
+                <code>
+                    git commit meuarquivo.txt -m "minha mensagem de commit"
+                </code>
+
+                <h3>Visualizar histórico</h3>
+                <p>Exibir histórico:</p>
+                <code>
+                    git log
+                </code>
             </article>
         </main>
 
