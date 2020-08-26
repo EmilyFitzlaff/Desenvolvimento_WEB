@@ -13,3 +13,41 @@
     color: white;
     text-align: center;
 }
+
+/* exercício 04 */ 
+div {
+    width: 15%;
+    height: 150px;
+}
+
+.top-left, .bottom-left {
+    float: left;
+}
+
+.top-right, .bottom-right {
+    float: right;  
+}
+
+.top-left {
+    background-color: red;
+}
+
+.top-right {
+    background-color: blue;
+}
+
+.center {
+    background-color: black;
+    clear: both;
+    margin: auto;
+    width: 70%;
+    height: 250px;
+}
+
+.bottom-right {
+    background-color: yellow;
+}
+
+.bottom-left {
+    background-color: green;
+}
