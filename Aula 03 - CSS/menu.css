@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    background: gray;
+    display: table;
+    width: 100%;
+}
+#menu ul {
+    list-style-type: none;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    font: 13px verdana, arial, tahoma, sans-serif;
+    color: red;
+    background-color: orange;
+    text-decoration: none;
+    float: left;
+    padding: 5px 10px;
+    margin-left: 1px; 
+}
+
+#menu ul li a:hover {
+    color: orange;
+    background-color: #000;
+}
