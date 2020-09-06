@@ -9,7 +9,8 @@
 
 body {
     margin: auto 10%;
-    background-color: rgba(235, 235, 211, 0.9);
+    /* background-color: rgba(235, 235, 211, 0.9); */
+    background-color: red;
 }
 
 header {
@@ -83,7 +84,7 @@ p {
     font-size: 25px; 
 }
 
-h3#subtitulo {
+.subtitulo {
     text-align: center;
     color: red;
 }
