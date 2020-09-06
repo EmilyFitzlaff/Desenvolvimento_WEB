@@ -72,13 +72,17 @@ main {
 p {
     text-align: justify;
     text-indent: 50px;
-    font-size: 16px;
+    font-size: 16pt;
     margin-bottom: 20px;
 }
 
 .titulo {
     font-family: 'Quicksand', sans-serif;
-    font-size: 25px; 
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px; 
+}
+
+.subtitulo {
     text-align: center;
 }
