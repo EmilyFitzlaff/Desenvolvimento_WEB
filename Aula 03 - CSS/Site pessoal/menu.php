@@ -1,8 +1,10 @@
-<nav id="menu">
-    <ul>
-        <li>Página Inicial</li>
-        <li>Informações Pessoais</li>
-        <li>Currículo</li>
-        <li>Contato</li>
-    </ul>
-</nav>
+<header>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.php">Página Inicial</a></li>
+            <li><a href="info-pessoais.php">Informações Pessoais</a></li>
+            <li><a href="curriculo.php">Currículo</a></li>
+            <li><a href="contato.php">Contato</a></li>
+        </ul>
+    </nav>
+</header>
