@@ -83,6 +83,7 @@ p {
     font-size: 25px; 
 }
 
-.subtitulo {
+h3#subtitulo {
     text-align: center;
+    color: red;
 }

@@ -9,7 +9,7 @@
         <?php include_once('header.php'); ?>
         <main>
             <h2 class="titulo">Lorem Ipsum</h2>
-            <h3 class="subtitulo"><em>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</em></h3>
+            <h3 id="subtitulo"><em>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</em></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed molestie tellus. Nam gravida, quam at gravida molestie, neque ipsum fringilla eros, quis varius risus erat a diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas commodo justo quis ipsum facilisis, ornare pulvinar metus elementum. Sed mollis maximus rhoncus. Maecenas tempor ipsum in lobortis mollis.</p>
 
             <p>Phasellus faucibus arcu nisi, a auctor orci pharetra in. Sed vulputate, mauris at dapibus faucibus, mauris orci finibus ligula, in vehicula dolor sapien in elit. Fusce semper ante vel elementum lobortis. Sed suscipit sem turpis, tempus aliquam ante auctor eget. Morbi tristique diam arcu, et feugiat orci laoreet eu. Morbi ut molestie libero, ut fermentum justo. Curabitur mi est, feugiat non sodales non, fringilla id erat. Aliquam nec metus risus. Donec suscipit, eros nec pellentesque sollicitudin, urna erat dignissim velit, sit amet euismod elit felis nec tortor. Curabitur sed bibendum nulla. Donec nec gravida risus. Aliquam ut odio in purus cursus sagittis vitae eleifend sapien. Sed ut purus vitae ipsum imperdiet varius. Aliquam semper hendrerit ligula id luctus. Nunc dapibus sit amet massa et vulputate.</p>
