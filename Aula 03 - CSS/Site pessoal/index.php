@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <?php include_once('menu.php'); ?>
+        <?php include_once('header.php'); ?>
         <div class="clear"></div>
         <?php include_once('footer.php'); ?>
     </body>

@@ -1,3 +1,6 @@
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,6 +9,24 @@
 body {
     margin: auto 10%;
     border: 1px solid red;
+    background-color: rgba(235, 235, 211, 0.9);
+}
+
+header {
+    height: auto;
+    background-color: #F9CDAD;
+}
+
+/* logo */
+
+#logo {
+    height: 50px;
+}
+
+h1#logo {
+    float: left;
+    line-height: 50px;  
+    font-family: 'Dancing Script', cursive;
 }
 
 /* menu */
@@ -13,6 +34,7 @@ body {
     border: 1px solid blue;
     float: right;
     height: 50px;
+    margin-top: 50px;
 }
 
 #menu ul {
@@ -20,12 +42,11 @@ body {
 }
 
 #menu ul li {
-
     display: inline;
 }
 
 #menu ul li a {
-
+    line-height: 50px;
     padding: 5px 10px;
 }
 /* clear */
