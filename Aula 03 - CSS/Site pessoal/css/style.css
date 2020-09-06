@@ -1,5 +1,6 @@
 /* FONTES */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
     margin: 0px;
@@ -50,6 +51,7 @@ h1#logo {
     color: black;
     text-decoration: none;
     border-radius: 5px 5px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #menu ul li a:hover {
@@ -59,4 +61,24 @@ h1#logo {
 /* clear */
 .clear {
     clear: both;
+}
+
+/* conteúdo */
+main {
+    background-color: white;
+    padding: 50px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px; 
+    margin-bottom: 20px;
+    text-align: center;
 }
