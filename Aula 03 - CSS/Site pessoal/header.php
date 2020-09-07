@@ -1,5 +1,5 @@
 <header>
-    <h1 id="logo">Logo Logo Logo Logo</h1>
+    <!--<h1 id="logo">Logo Logo Logo Logo</h1>-->
     <nav id="menu">
         <ul>
             <li><a href="index.php">Página Inicial</a></li>
