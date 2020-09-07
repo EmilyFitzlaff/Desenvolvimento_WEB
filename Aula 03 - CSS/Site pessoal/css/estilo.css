@@ -104,3 +104,7 @@ p {
     margin-bottom: 0px;
     font-family: 'Quicksand', sans-serif;
 }
+
+table tr {
+    border: 1px solid black;
+}
