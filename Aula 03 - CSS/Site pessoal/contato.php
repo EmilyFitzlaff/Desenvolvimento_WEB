@@ -21,7 +21,7 @@
                     <select>
                         <option value="NI" disabled selected class="disabled">Não informado</option>
                         <option value="sugestao">Sugestão</option>
-                        <option value="elogia">Elogia</option>
+                        <option value="elogia">Elogio</option>
                         <option value="reclamacao">Reclamação</option>
                     </select>
 
