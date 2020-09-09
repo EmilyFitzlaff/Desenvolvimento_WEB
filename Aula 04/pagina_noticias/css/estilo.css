@@ -1,3 +1,19 @@
-body{
-    background-color:red;
+body {
+    background: url('../img/noise.png');
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    width: 900px;
+}
+
+h1 a {
+    color: #7e9f19;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    background-color: #7e9f19;;
+    color: white;
 }
