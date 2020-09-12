@@ -1,6 +1,11 @@
 body {
-    background: url('../img/noise.png');
+    background: #fffdee;
     line-height: 1.6;
+}
+
+img {
+    width: 200px;
+    height: auto;
 }
 
 .container {
@@ -11,9 +16,61 @@ body {
 h1 a {
     color: #7e9f19;
     text-decoration: none;
+    padding: 5px;
 }
 
 h1 a:hover {
-    background-color: #7e9f19;;
-    color: white;
+    background-color: #7e9f19;
+    color: white;  
+}
+
+.locais {
+    float: left;
+    width: 640px;
+}
+
+.local {
+    background: white;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.local h2 {
+    color: rgb(83,177,14);
+    font-weight: bold;
+    border-bottom: 1px dashed #7e9f19; 
+}
+
+.local img {
+    border: 1px solid #7e9f19;
+    float: left;
+    margin: 5px 10px;
+}
+
+.menu-lateral {
+    float: right;
+    width: 240px;
+    background: #fffde4;
+    border: 1px solid #c9bc8f;
+    padding: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu-lateral h3 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.menu-lateral ol {
+    font-size: 12px;
+}
+
+.rodape {
+    font-size: 12px;
+    text-align: center;
 }
