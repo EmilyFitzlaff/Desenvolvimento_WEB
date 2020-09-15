@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset='utf-8'>
+        <title>Box Model</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .sem_padding {
+                background-color: aquamarine;
+                width: 300px;
+            }
+
+            .com_padding {
+                background-color: red;
+                width: 300px;
+                padding: 10px 30px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="sem_padding"> Elemento sem Padding </div>
+        <div class="com_padding"> Elemento com Padding </div>       
+    </body>
+</html>
