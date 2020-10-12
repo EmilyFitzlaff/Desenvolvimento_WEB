@@ -8,8 +8,10 @@
     </head>
     
     <body>
+        <div class="container">
+            <?php include_once('menu.php'); ?>
 
-
-        <?php include_once('footer.php'); ?>
+            <?php include_once('footer.php'); ?>
+        </div>
     </body>
 </html>
