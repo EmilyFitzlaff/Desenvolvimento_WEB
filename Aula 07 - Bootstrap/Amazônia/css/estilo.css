@@ -1,3 +1,8 @@
-.bg-green {
-    background-color: #519548;
+.paragrafo {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.top-margin {
+    margin-top: 50px;
 }
