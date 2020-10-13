@@ -16,7 +16,7 @@
                     <p class="font-italic">Origem: Wikipédia, a enciclopédia livre.</p>
                     <p class="paragrafo">A conceito de Amazônia pode variar dependendo do ponto de vista (fisiográfico, geomorfológico, biogeográfico, político, de planejamento territorial, etc.), da mesma maneira, variam sua extensão, suas subdivisões e a terminologia utilizada.</p>
 
-                    <h3>Em biogegrafia</h3>
+                    <h2>Em biogegrafia</h2>
                     <p>Divisão fitogeográfica de Ducke e Black (1954):</p>
                     <ul>
                         <li>Setor Atlântico</li>
