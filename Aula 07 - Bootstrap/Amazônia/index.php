@@ -17,7 +17,7 @@
             <p class="paragrafo">No Brasil, para efeitos de governo e economia, a Amazônia é delimitada por uma área chamada "Amazônia Legal" definida a partir da criação da Superintendência do Desenvolvimento da Amazônia (SUDAM), em 1966. É chamado também de Amazônia o bioma que, no Brasil, ocupa 49,29% do território e abrange três das cinco divisões regionais do país (Norte, Nordeste e Centro-Oeste), sendo o maior bioma terrestre do país.</p>
             <p class="paragrafo">Uma área de seis milhões de hectares no centro de sua bacia hidrográfica, incluindo o Parque Nacional do Jaú, foi considerada pela Organização das Nações Unidas para a Educação, a Ciência e a Cultura, em 2000 (com extensão em 2003), Patrimônio da Humanidade. A Amazônia também foi pré-selecionada em 2008 como candidata a uma das sete maravilhas naturais do mundo, sendo classificada em primeiro lugar no Grupo E, a categoria para as florestas, parques nacionais e reservas naturais, em fevereiro de 2009.</p>
             <figure>
-                <img src="img/territorio.jpg"  class="rounded mx-auto d-block" >
+                <img src="img/territorio.jpg" class="rounded mx-auto d-block" >
                 <figcaption class="figure-caption text-center">Mapa da ecorregião amazônica definida pelo WWF.</figcaption>
             </figure>
             <?php include_once('footer.php'); ?>
