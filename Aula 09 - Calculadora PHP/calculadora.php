@@ -31,7 +31,7 @@
             }  
 
             .destaque {
-                background-color: purple;
+                background-color: black;
             }          
         </style>      
     </head>
