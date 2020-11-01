@@ -129,9 +129,7 @@
         </table>
         </form>
         <?php
-    
-            $_SESSION = 
-            print_r($_SESSION);
+
         ?>
     </body>
 </html>
