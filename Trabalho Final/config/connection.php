@@ -3,7 +3,7 @@
     $password = 123;
     $host = "localhost";
     $port = 5433;
-    $dbname = "HELPDESK";
+    $dbname = "northwind";
 
     try {
         $connection = new PDO("pgsql:host={$host}; port={$port}; dbname={$dbname}; user={$user}; password={$password}");
