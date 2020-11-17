@@ -1,7 +1,7 @@
 <?php
 
-include_once('../config/connection.php');
-include_once('../config/functions.php');
+//include_once('../config/connection.php');
+//include_once('../config/functions.php');
 
 class Transportadora { 
     private $IDTransportadora;
@@ -16,5 +16,7 @@ class Transportadora {
         $stmt->execute();
     }    
 }
+
+
 
 ?>
