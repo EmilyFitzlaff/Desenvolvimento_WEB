@@ -8,11 +8,6 @@ class Transportadora {
     private $NomeCompanhia;
     private $Telefone;
 
-    public function getTransportadora() {
-
-        
-    }
-
     public function CadastrarTransportadora($NomeCompanhia, $Telefone){   
         $IDTransportadora = getMaxID("shipper_id", "shippers") +1;
 
