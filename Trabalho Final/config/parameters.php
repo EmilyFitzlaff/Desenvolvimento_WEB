@@ -5,4 +5,5 @@
     define("INCLUDES",   dirname(__DIR__) ."/includes/");
     define("CLASSE",     dirname(__DIR__) ."/class/");
     define("BD",         dirname(__DIR__) ."/bd/");
+    define("CADASTROS",  dirname(__DIR__) ."/cadastros/");
 ?>

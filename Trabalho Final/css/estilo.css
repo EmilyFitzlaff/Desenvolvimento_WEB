@@ -29,10 +29,15 @@
 footer {
     height: 80px;
     background-color: rgba(0,0,0,.1);
+
 }
 
 footer p {
     line-height: 80px;
     text-align: center;
     margin-bottom: 0px;
+}
+
+form {
+    margin-bottom: 20px;
 }

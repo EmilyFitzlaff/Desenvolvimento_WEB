@@ -8,4 +8,12 @@ function getMaxID($id_coluna, $nome_tabela) {
     return $max['max'];
 }
 
+function DeletarRegistro ($codigoRegistro, $nomeTabela, $colunaBD) {
+    $stmt = Conectar()->prepare("DELETE FROM " . $nomeTabela . "
+    WHERE " . $colunaBD . " = " . $codigoRegistro);
+
+    $stmt->execute();
+    header('location: transportadora.php');
+}
+
 ?>
