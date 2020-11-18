@@ -1,8 +1,5 @@
 <?php
 
-//include_once('../config/connection.php');
-//include_once('../config/functions.php');
-
 class Transportadora { 
     private $IDTransportadora;
     private $NomeCompanhia;
@@ -17,6 +14,18 @@ class Transportadora {
     }    
 }
 
+function ListarTransportadoras() {
+    $consulta = Conectar()->prepare("SELECT * FROM shippers");
 
+    $consulta->execute();
+
+    $dados = [];
+
+    while($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+        $dados[] = $linha;
+    }
+
+    return $dados;        
+}
 
 ?>

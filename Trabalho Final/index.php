@@ -1,12 +1,14 @@
 <?php
     $title = "Página Principal";
 
-    require_once('includes/header.php');
-    require_once('config/connection.php');
+    // require
+    require_once ('config/parameters.php');
+    require_once INCLUDES."/header.php";
+    require_once CONFIG."/connection.php";
 ?>
 
 <body>
-    <?php include_once('includes/menu.php'); ?>
-
-        
+    <?php 
+        include_once INCLUDES."/menu.php"; 
+    ?>        
 </body>

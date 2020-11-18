@@ -1,15 +1,13 @@
 <?php 
-
     $title = "Transportadora";
 
-    require_once('includes/header.php');
-    require_once('config/connection.php'); 
-    include_once('includes/menu.php');
-    require_once('class/class_transportadora.php');
-    require_once('config/functions.php');
+    require_once ('config/parameters.php');
+    require_once INCLUDES."/header.php";
+    require_once INCLUDES."/menu.php";
+    require_once CONFIG."/connection.php";
+    require_once CLASSE."/class_transportadora.php";
+    require_once CONFIG."/functions.php";
 ?>
-
-
 <div class="container">
     <h1 class="titulo-principal">Consultar Transportadoras</h1>
     <?php $resultado = ListarTransportadoras(); ?>
