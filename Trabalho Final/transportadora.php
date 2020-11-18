@@ -30,7 +30,7 @@
                 <th scope="row"><?php echo $linha['shipper_id'] ?></th>
                 <td><?php echo $linha['company_name'] ?></td>
                 <td><?php echo $linha['phone'] ?></td>
-                <td>Alterar | Excluir</td>
+                <td><a href="#">Alterar</a> | <a href="">Excluir</a></td>
             </tr>
             <?php } ?>
         </tbody>
