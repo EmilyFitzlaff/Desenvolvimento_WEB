@@ -8,7 +8,7 @@
     require_once CLASSE."/class_transportadora.php";
     require_once CONFIG."/functions.php";
 
-    ListarTransportadoras();
+    ListarTransportadoras()
 ?>
 <div class="container">
     <h1 class="titulo-principal">Cadastrar Transportadoras</h1>
@@ -18,13 +18,8 @@
             <input type="text" 
                    class="form-control" 
                    id="descricaoTransportadora" 
-                   placeholder="Informe o nome da transportadora" name="descricaoTransportadora" 
-                   <?php
-                        if (isset($_GET['acao']) && $_GET['acao'] == 'alterar') {
-                            echo "value=";
-                    }
-                    ?> 
-                    required>
+                   placeholder="Informe o nome da transportadora" name="descricaoTransportadora"
+                   required>
         </div>
         <div class="form-group">
             <label for="telefoneTransportadora">Telefone para Contato</label>
