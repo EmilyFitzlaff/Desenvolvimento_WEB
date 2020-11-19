@@ -30,7 +30,8 @@
             exit;
            
         } catch(PDOException $erro) {
-            echo '<br><div class="alert alert-danger" role="alert">
+            echo '<br>
+                  <div class="alert alert-danger" role="alert">
                     Esse registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!
                   </div>';
             // echo "<em>Erro: {$erro->getMessage()}</em>";
@@ -51,12 +52,7 @@
     <form method="POST">
         <div class="form-group">
             <label for="descricaoTransportadora">Nome da Transportadora</label>
-            <input type="text" 
-                   class="form-control" 
-                   id="descricaoTransportadora" 
-                   name="descricaoTransportadora"
-                   value="<?php echo $resultado[0]['company_name']?>"
-                   disabled>
+            <input type="text"  class="form-control" id="descricaoTransportadora" name="descricaoTransportadora" value="<?php echo $resultado[0]['company_name']?>" disabled>
         </div>
         
         <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>

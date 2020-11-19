@@ -11,5 +11,15 @@ CREATE TABLE menu (
     PRIMARY KEY (menu_codigo) 
 ); 
 
-INSERT INTO menu(menu_descricao, menu_ordem, menu_endereco, menu_classe) VALUES
-('Página Inicial', 1, '', '');
+alter table menu add column submenu integer;
+alter table menu add column menu_pai integer;
+
+create table usuario (
+	codigo SERIAL NOT NULL,
+	nome VARCHAR(250) NOT NULL,
+	senha INT NOT NULL,
+
+	CONSTRAINT pk_tbusuario
+	PRIMARY KEY(codigo)
+);
+

@@ -8,18 +8,14 @@
     require_once CLASSE."/class_transportadora.php";
     require_once CONFIG."/functions.php";
 
-    ListarTransportadoras()
+    ListarTransportadoras();
 ?>
 <div class="container">
     <h1 class="titulo-principal">Cadastrar Transportadoras</h1>
     <form method="POST">
         <div class="form-group">
             <label for="descricaoTransportadora">Nome da Transportadora</label>
-            <input type="text" 
-                   class="form-control" 
-                   id="descricaoTransportadora" 
-                   placeholder="Informe o nome da transportadora" name="descricaoTransportadora"
-                   required>
+            <input type="text" class="form-control" id="descricaoTransportadora" placeholder="Informe o nome da transportadora" name="descricaoTransportadora" required>
         </div>
         <div class="form-group">
             <label for="telefoneTransportadora">Telefone para Contato</label>
@@ -34,7 +30,7 @@
 
             echo '<div class="alert alert-success" role="alert">
                     Transportadora cadastrada com sucesso!
-                </div>';
+                  </div>';
         }
     ?>
 </div>
