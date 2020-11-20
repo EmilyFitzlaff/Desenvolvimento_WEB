@@ -1,7 +1,6 @@
 <?php
     $title = "Página Principal";
 
-    // require
     require_once ('config/parameters.php');
     require_once INCLUDES."/header.php";
     require_once CONFIG."/connection.php";
@@ -11,13 +10,12 @@
 <body>
     <?php 
         $_SESSION = [];
-        $_SESSION['usuariologado.php'] = false;
+        $_SESSION['usuariologado'] = false;
 
-        if ($_SESSION['usuariologado.php']) {
+        if ($_SESSION['usuariologado']) {
             include_once INCLUDES."/menu.php"; 
         } else {
             include_once 'login.php';
-        }
-        
+        }    
     ?>        
 </body>

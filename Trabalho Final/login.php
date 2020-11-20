@@ -9,6 +9,6 @@
             <label for="senhaUsuario">Senha</label>
             <input type="password" class="form-control" id="senhaUsuario" placeholder="***********" name="senhaUsuario" required maxlength="11">
         </div>
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary" name="logar" value="logar">Entrar</button>
     </form>
 </div>

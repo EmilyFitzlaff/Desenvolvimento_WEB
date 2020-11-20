@@ -1,15 +1,23 @@
 <?php
 
-var_dump($_POST);
+    // var_dump($_POST);
 
-$stmt = Conectar()->prepare("SELECT * FROM USUARIO WHERE login = :codigo AND senha = :senha");
+    if($_POST['logar']) {
+        $stmt = Conectar()->prepare("SELECT * FROM USUARIO WHERE login = {$_POST['codigoUsuario']} AND senha =  '{$_POST['senhaUsuario']}'");
 
-$stmt->bindParam(':codigo', $_POST['codigoUsuario']);
-$stmt->bindParam(':senha', $_POST['senhaUsuario']);
-$stmt->execute();
+        var_dump($stmt);
 
-$resultado = $stmt->fetchAll();
+        $stmt->execute();
 
-var_dump($resultado);
+        $resultado = $stmt->fetchAll();
 
+        if ($_POST['codigoUsuario'] == $resultado[0]['login'] && 
+            $_POST['senhaUsuario'] == $resultado[0]['senha']) {
+            $_SESSION['usuariologado'] = true;
+            echo 'entrou no if';
+        } else {
+            $_SESSION['errousuario'] = true;
+            echo 'entrou no else';
+        }
+    }
 ?>
