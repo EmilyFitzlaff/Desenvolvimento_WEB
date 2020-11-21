@@ -19,7 +19,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="transportadora.php">Transportadoras</a>                
+                    <a class="dropdown-item" href="transportadora.php">Transportadoras</a>    
+                    <a class="dropdown-item" href="regiao.php">Regiões</a>               
                 </div>
             </li>
         </ul>
