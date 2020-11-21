@@ -106,8 +106,28 @@
             }
         }
 
-        public function InsertShipper() {
-            
+        public function InsertShipper($NomeCompanhia, $Telefone) {
+            $IDTransportadora = getMaxID("shipper_id", "shippers") +1;
+
+            $stmt = Conexao::Conectar()->prepare("INSERT INTO shippers (Shipper_id, Company_Name, phone) VALUES ($IDTransportadora, '". $NomeCompanhia ."', '". $Telefone."')");       
+        
+            $stmt->execute();
+        }
+
+        public function CreateForm() {
+            ?>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="descricaoTransportadora">Nome da Transportadora</label>
+                    <input type="text" class="form-control" id="descricaoTransportadora" placeholder="Informe o nome da transportadora" name="descricaoTransportadora" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefoneTransportadora">Telefone para Contato</label>
+                    <input type="phone" class="form-control" id="telefoneTransportadora" placeholder="Informe um telefone para contato" name="telefoneTransportadora" required>
+                </div>
+                <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
+            </form>
+            <?php
         }
     }
 ?>
