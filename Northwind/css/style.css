@@ -1,0 +1,21 @@
+h1 {
+    font-size: 18pt;
+    margin: 20px 0px;
+}
+
+label {
+    font-weight: bolder;
+}
+
+.green {
+    color: green;
+}
+
+.white:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
