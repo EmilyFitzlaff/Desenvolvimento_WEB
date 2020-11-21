@@ -9,6 +9,7 @@
 
 <body>
     <?php 
+        session_start();
         $_SESSION = [];
         $_SESSION['usuariologado'] = false;
 
