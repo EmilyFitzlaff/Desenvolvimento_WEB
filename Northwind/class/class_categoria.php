@@ -151,17 +151,19 @@
                         throw new PDOException();
                     }
         
-                    echo '<br>
-                          <div class="alert alert-success" role="alert">
-                            Categoria excluída com sucesso!
-                          </div>';
-                    exit;
+                   ?><br>
+                    <div class="alert alert-success" role="alert">
+                        <p>Categoria excluída com sucesso!</p>
+                    </div>
+                    <?php
                    
                 } catch(PDOException $erro) {
-                    echo '<br>
-                          <div class="alert alert-danger" role="alert">
-                            Esse registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!
-                          </div>';
+                    ?>
+                    <br>
+                    <div class="alert alert-danger" role="alert">
+                        <p>Esse registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!</p>
+                    </div>
+                    <?php
                 }
             }
         }

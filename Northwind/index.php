@@ -1,9 +1,10 @@
 <?php
     $title = "Página Inicial";
 
-    require_once ('config/parameters.php');
-    require_once LAYOUTS."/header.php";
-    require_once CLASSES."/class_connection.php";
+    include_once('class/class_categoria.php');
+    include_once('config/functions.php');
+    include_once('layout/header.php');
+    include_once('layout/menu.php');
 ?>
 
 <body>
