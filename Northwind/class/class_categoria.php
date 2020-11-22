@@ -42,7 +42,6 @@
             $this->figura = $figura;
         }
 
-
         /**
          * @return Array retorna em um array todas as informações do banco de dados
          */
@@ -78,7 +77,6 @@
                             <th scope="col">Código</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col">Figura</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -90,7 +88,6 @@
                             <td scope="row"><?php echo $oObjeto->getCodigo();?></td>
                             <td><?php echo $oObjeto->getNome(); ?></td>
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
-                            <td><?php echo $oObjeto->getFigura(); ?></td>
                             <td>
                                 <a href='' class="green">
                                     <span class="btn btn-outline-primary">Alterar 
@@ -100,7 +97,7 @@
                                         </svg>
                                     </span>
                                 </a>                        
-                                <a href='' class="red">
+                                <a href='excluir_categoria.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red">
                                     <span class="btn btn-outline-danger">Excluir
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -141,6 +138,32 @@
                 <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
             </form>
             <?php
+        }
+
+        public function DeletarCategoria($codigo) {
+            if(isset($_POST['excluir'])) {
+                try {
+                    $stmt = Conexao::Conectar()->prepare("DELETE FROM categories WHERE category_id = :id");
+        
+                    $stmt->bindParam(':id', $codigo);
+        
+                    if (!$stmt->execute()){
+                        throw new PDOException();
+                    }
+        
+                    echo '<br>
+                          <div class="alert alert-success" role="alert">
+                            Categoria excluída com sucesso!
+                          </div>';
+                    exit;
+                   
+                } catch(PDOException $erro) {
+                    echo '<br>
+                          <div class="alert alert-danger" role="alert">
+                            Esse registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!
+                          </div>';
+                }
+            }
         }
     }
 ?>
