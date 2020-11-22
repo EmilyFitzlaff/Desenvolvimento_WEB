@@ -107,7 +107,7 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="descricaoRegiao">Descrição da Região</label>
-                    <input type="text" class="form-control" id="descricaoRegiao" placeholder="Informe o nome da transportadora" name="descricaoRegiao" required>
+                    <input type="text" class="form-control" id="descricaoRegiao" placeholder="Informe a descrição da região" name="descricaoRegiao" required>
                 </div>
                 <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
             </form>
