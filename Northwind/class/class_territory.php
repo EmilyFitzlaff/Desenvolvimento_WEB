@@ -145,7 +145,7 @@
         
                    ?><br>
                     <div class="alert alert-success" role="alert">
-                        <p>Território excluído com sucesso!</p>
+                        <p>Registro excluído com sucesso!</p>
                     </div>
                     <?php
                    
@@ -153,7 +153,7 @@
                     ?>
                     <br>
                     <div class="alert alert-danger" role="alert">
-                        <p>Esse registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!</p>
+                        <p>Este registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!</p>
                     </div>
                     <?php
                 }

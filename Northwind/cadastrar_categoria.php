@@ -28,7 +28,7 @@
                     <br>
                     <div class="alert alert-danger" role="alert">
                         <p>Ocorreu um erro inesperado, entre em contato com o suporte.</p> 
-                    </div>';
+                    </div>
                 <?php
                     echo "<em>Erro: {$erro->getMessage()}</em>";           
             }
