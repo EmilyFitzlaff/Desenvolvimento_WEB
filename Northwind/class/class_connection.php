@@ -3,7 +3,7 @@
     /**
      * @var Connection classe para conexão com o banco de dados
      */
-    Class Conexao {
+    Class Conexao extends PDO {
         public static function Conectar() {
             $user = "postgres";
             $password = 123;
