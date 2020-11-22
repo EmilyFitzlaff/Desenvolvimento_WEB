@@ -87,7 +87,7 @@
                                         </svg>
                                     </span>
                                 </a>                        
-                                <a href='' class="red">
+                                <a href='excluir_transportadora.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red">
                                     <span class="btn btn-outline-danger">Excluir
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -128,6 +128,34 @@
                 <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
             </form>
             <?php
+        }
+
+        public function DeletarShipper($codigo) {
+            if(isset($_POST['excluir'])) {
+                try {
+                    $stmt = Conexao::Conectar()->prepare("DELETE FROM shippers WHERE shipper_id = :id");
+        
+                    $stmt->bindParam(':id', $codigo);
+        
+                    if (!$stmt->execute()){
+                        throw new PDOException();
+                    }
+        
+                   ?><br>
+                    <div class="alert alert-success" role="alert">
+                        <p>Registro excluído com sucesso!</p>
+                    </div>
+                    <?php
+                   
+                } catch(PDOException $erro) {
+                    ?>
+                    <br>
+                    <div class="alert alert-danger" role="alert">
+                        <p>Este registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!</p>
+                    </div>
+                    <?php
+                }
+            }
         }
     }
 ?>
