@@ -1,18 +1,14 @@
 <?php
     require_once('class_connection.php');
-    require_once('class_region.php');
 
     /**
-     * @var Territorio classe contendo os atributos de transportadora
+     * @var Categoria classe contendo os atributos de transportadora
      */
-    class Territory {
-        /**
-         * @var Regiao class_region.php
-         */
-        private $Region;
-
+    class Categoria {
         private $codigo;
         private $nome;
+        private $descricao;
+        private $figura;
 
         public function getCodigo() {
             return $this->codigo;
@@ -30,32 +26,37 @@
             $this->nome = $nome;
         }
 
-        public function getRegion() {
-            return $this->Region;
+        public function getDescricao() {
+            return $this->descricao;
         }
 
-        public function setRegion(Region $region) {
-            $this->Region = $region;
+        public function setDescricao($descricao) {
+            $this->descricao = $descricao;
         }
+
+        public function getFigura() {
+            return $this->figura;
+        }
+
+        public function setFigura($figura) {
+            $this->figura = $figura;
+        }
+
 
         /**
          * @return Array retorna em um array todas as informações do banco de dados
          */
         private function SelectAll() {
-            $consulta = Conexao::Conectar()->prepare("SELECT * FROM territories JOIN region USING (region_id)");
+            $consulta = Conexao::Conectar()->prepare("SELECT * FROM categories");
             $consulta->execute();
 
             while($aLinha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                $oTerritory = new Territory;
-                $oRegion = new Region;
-
-                $oRegion->setCodigo($aLinha['region_id']);
-                $oRegion->setNome($aLinha['region_description']);
-
-                $oTerritory->setCodigo($aLinha['territory_id']);
-                $oTerritory->setNome($aLinha['territory_description']);
-                $oTerritory->setRegion($oRegion);
-                $aResultado[] = $oTerritory;
+                $oCategoria = new Categoria;
+                $oCategoria->setCodigo($aLinha['category_id']);
+                $oCategoria->setNome($aLinha['category_name']);
+                $oCategoria->setDescricao($aLinha['description']);
+                $oCategoria->setFigura($aLinha['picture']);
+                $aResultado[] = $oCategoria;
             }
             return $aResultado;  
         }
@@ -75,8 +76,9 @@
                     <thead>
                         <tr>
                             <th scope="col">Código</th>
+                            <th scope="col">Nome</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col">Região</th>
+                            <th scope="col">Figura</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -87,8 +89,9 @@
                         <tr>
                             <td scope="row"><?php echo $oObjeto->getCodigo();?></td>
                             <td><?php echo $oObjeto->getNome(); ?></td>
-                            <td><?php echo $oObjeto->getRegion()->getNome(); ?></td>
-                            <td class="coluna-tabela">
+                            <td><?php echo $oObjeto->getDescricao(); ?></td>
+                            <td><?php echo $oObjeto->getFigura(); ?></td>
+                            <td>
                                 <a href='' class="green">
                                     <span class="btn btn-outline-primary">Alterar 
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -116,10 +119,10 @@
             }
         }
 
-        public function InsertTerrority($descricao, $regiao) {
-            $IDTerritory = getMaxID("territory_id", "territories") +1;
+        public function InsertCategoria($nome, $descricao) {
+            $IDCategoria = getMaxID("category_id", "categories") +1;
 
-            $stmt = Conexao::Conectar()->prepare("INSERT INTO territories (territory_id, terrotory_description, region) VALUES ($IDTerritory, '". $descricao ."', '". $regiao."')");       
+            $stmt = Conexao::Conectar()->prepare("INSERT INTO categories (category_id,category_name, description) VALUES ($IDCategoria, '". $nome ."', '". $descricao ."')");       
         
             $stmt->execute();
         }
@@ -127,7 +130,15 @@
         public function CreateForm() {
             ?>
             <form method="POST">
-                
+                <div class="form-group">
+                    <label for="nomeCategoria">Nome da Categoria</label>
+                    <input type="text" class="form-control" id="nomeCategoria" placeholder="Informe o nome da categoria" name="nomeCategoria" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricaoCategoria">Descrição da Categoria</label>
+                    <input type="text" class="form-control" id="descricaoCategoria" placeholder="Informe a descrição da categoria" name="descricaoCategoria" required>
+                </div>
+                <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
             </form>
             <?php
         }

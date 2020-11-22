@@ -12,7 +12,10 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros Gerais</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="cadastrar_transportadora.php">Transportadoras</a>                
+                    <a class="dropdown-item" href="cadastrar_regiao.php">Região</a> 
+                    <a class="dropdown-item" href="cadastrar_territorio.php">Território</a>     
+                    <a class="dropdown-item" href="cadastrar_transportadora.php">Transportadora</a>
+                    <a class="dropdown-item" href="cadastrar_categoria.php">Categoria</a>  
                 </div>
             </li>
      
@@ -21,7 +24,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">                     
                     <a class="dropdown-item" href="regiao.php">Regiões</a>   
                     <a class="dropdown-item" href="territorio.php">Territórios</a>    
-                    <a class="dropdown-item" href="transportadora.php">Transportadoras</a>              
+                    <a class="dropdown-item" href="transportadora.php">Transportadoras</a> 
+                    <a class="dropdown-item" href="categoria.php">Categorias</a>              
                 </div>
             </li>
         </ul>
