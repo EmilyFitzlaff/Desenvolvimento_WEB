@@ -135,7 +135,7 @@
                     ?>
                     <br>
                     <div class="alert alert-danger" role="alert">
-                        <p>Este registro não pode ser excluído pois está vinculado à outro e isso violará a regra de integradade do banco de dados!</p>
+                        <p><?php echo mensagemIntegridadeBD(); ?></p>
                     </div>
                     <?php
                 }
