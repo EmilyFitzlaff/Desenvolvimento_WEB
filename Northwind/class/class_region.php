@@ -40,6 +40,11 @@
             return $aResultado;  
         }
 
+        public function returnSelectAll() {
+            $aDados = $this->SelectAll();
+            return ($aDados);
+        }
+
         public function CreateTable() {
             $aDados = $this->SelectAll();
 

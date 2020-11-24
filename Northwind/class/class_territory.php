@@ -127,7 +127,19 @@
         public function CreateForm() {
             ?>
             <form method="POST">
-                
+            <div class="form-group">
+                    <label for="descricaoTerritorio">Descrição do Território</label>
+                    <input type="text" class="form-control" id="descricaoTerritorio" placeholder="Informe a descrição do território" name="descricaoTerritorio" required>
+                </div>
+                <div class="form-group">
+                <?php
+                    $oRegiao = new Region;
+                    $aDados = $oRegiao->returnSelectAll();
+
+                    MontaSelectRegiao($aDados, "regiao", "Região");                    
+                ?>
+                </div>
+                <button type="submit" class="btn btn-primary" value="cadastrar" name="acaoCadastrar">Cadastrar</button>
             </form>
             <?php
         }
