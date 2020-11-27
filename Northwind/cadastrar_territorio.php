@@ -13,10 +13,10 @@
         
         $oTerritorio = new Territory;
         $oTerritorio->CreateForm(); 
-        
+    
         if (isset($_POST['acaoCadastrar']) && $_POST['acaoCadastrar'] == 'cadastrar'){ 
             try {
-                $oTerritorio->InsertTerrority($_POST['descricaoTerritorio'], $_POSTT['regiao']);
+                $oTerritorio->InsertTerrority($_POST['descricaoTerritorio'], $_POST['regiao']);
                 ?>
                     <br>
                     <div class="alert alert-success" role="alert">
@@ -25,8 +25,9 @@
                 <?php
             } catch (PDOException $erro) {
                 ?>
+                    <br>
                     <div class="alert alert-danger" role="alert">
-                        <p>Ocorreu um erro inesperado, entre em contato com o suporte.</p> 
+                        <span>Ocorreu um erro inesperado, entre em contato com o suporte.</span> 
                     </div>
                 <?php
                     echo "<em>Erro: {$erro->getMessage()}</em>";           

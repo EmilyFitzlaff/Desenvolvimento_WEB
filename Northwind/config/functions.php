@@ -20,12 +20,4 @@
     function mensagemIntegridadeBD() {
         return "Este registro não pode ser excluído pois está vinculado à outro e isso violará uma regra de integradade do banco de dados!";
     }
-
-    function MontaSelectRegiao($array, $nomeSelect, $descricaoSelect) {
-        echo "<select name='$nomeSelect'> $descricaoSelect";
-        foreach ($array as $oObjeto){
-            echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getNome()}</option>";
-        }
-        echo "</select>";
-    }
 ?>

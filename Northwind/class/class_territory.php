@@ -119,7 +119,7 @@
         public function InsertTerrority($descricao, $regiao) {
             $IDTerritory = getMaxID("territory_id", "territories") +1;
 
-            $stmt = Conexao::Conectar()->prepare("INSERT INTO territories (territory_id, terrotory_description, region) VALUES ($IDTerritory, '". $descricao ."', '". $regiao."')");       
+            $stmt = Conexao::Conectar()->prepare("INSERT INTO territories (territory_id, territory_description, region_id) VALUES ($IDTerritory, '". $descricao ."', '". $regiao."')");       
         
             $stmt->execute();
         }
@@ -171,5 +171,14 @@
                 }
             }
         }
+    }
+
+    function MontaSelectRegiao($array, $nomeSelect, $descricaoSelect) {
+        echo "<label for='regiao'>{$descricaoSelect}</label>";
+        echo "<select name='$nomeSelect'>";
+        foreach ($array as $oObjeto){
+            echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getNome()}</option>";
+        }
+        echo "</select>";
     }
 ?>
