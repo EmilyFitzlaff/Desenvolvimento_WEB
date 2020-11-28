@@ -1,6 +1,6 @@
 <?php
 
-    $title = "Excluir Transportadora";
+    $title = "Excluir Categoria";
 
     include_once('class/class_categoria.php');
     include_once('config/functions.php');
