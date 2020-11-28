@@ -34,14 +34,6 @@
             $this->descricao = $descricao;
         }
 
-        public function getFigura() {
-            return $this->figura;
-        }
-
-        public function setFigura($figura) {
-            $this->figura = $figura;
-        }
-
         /**
          * @return Array retorna em um array todas as informações do banco de dados
          */
@@ -54,7 +46,6 @@
                 $oCategoria->setCodigo($aLinha['category_id']);
                 $oCategoria->setNome($aLinha['category_name']);
                 $oCategoria->setDescricao($aLinha['category_description']);
-                $oCategoria->setFigura($aLinha['picture']);
                 $aResultado[] = $oCategoria;
             }
             return $aResultado;  
@@ -119,9 +110,10 @@
         public function InsertCategoria($nome, $descricao) {
             $IDCategoria = getMaxID("category_id", "categories") +1;
 
-            $stmt = Conexao::Conectar()->prepare("INSERT INTO categories (category_id,category_name, category_description) VALUES ($IDCategoria, '". $nome ."', '". $descricao ."')");       
-        
-            $stmt->execute();
+            $sql = ("INSERT INTO categories (category_id,category_name, category_description) 
+            VALUES ($IDCategoria, '". $nome ."', '". $descricao ."')");
+         
+            executeQuery($sql);   
         }
 
         public function CreateForm() {
@@ -129,7 +121,7 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="nomeCategoria">Nome da Categoria</label>
-                    <input type="text" class="form-control" id="nomeCategoria" placeholder="Informe o nome da categoria" name="nomeCategoria" required>
+                    <input type="text" class="form-control" id="nomeCategoria" placeholder="Informe o nome da categoria" name="nomeCategoria" required maxlength="15">
                 </div>
                 <div class="form-group">
                     <label for="descricaoCategoria">Descrição da Categoria</label>
@@ -143,11 +135,10 @@
         public function DeletarCategoria($codigo) {
             if(isset($_POST['excluir'])) {
                 try {
-                    $stmt = Conexao::Conectar()->prepare("DELETE FROM categories WHERE category_id = :id");
+                    $sql = ("DELETE FROM categories WHERE category_id = {$codigo}");
+                    executeQuery($sql);
         
-                    $stmt->bindParam(':id', $codigo);
-        
-                    if (!$stmt->execute()){
+                    if (!executeQuery($sql)){
                         throw new PDOException();
                     }
         
@@ -156,6 +147,7 @@
                         <span>Registro excluído com sucesso!</span>
                     </div>
                     <?php
+                    exit;
                    
                 } catch(PDOException $erro) {
                     ?>
@@ -163,7 +155,7 @@
                     <div class="alert alert-danger" role="alert">
                         <span><?php echo mensagemIntegridadeBD(); ?></span>
                     </div>
-                    <?php
+                    <?php                    
                 }
             }
         }

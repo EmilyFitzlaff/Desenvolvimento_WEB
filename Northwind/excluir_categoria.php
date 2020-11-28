@@ -19,6 +19,9 @@
         
         $resultado = $stmt->fetchAll();   
     }
+
+    $oCategoria = new Categoria();
+    $oCategoria->DeletarCategoria($_GET['registro']);
 ?>
     <h1 class="titulo-principal">Tem certeza que seja excluir o registro abaixo?</h1>
     <form method="POST">
@@ -31,7 +34,6 @@
     </form>
 
     <?php 
-        $oCategoria = new Categoria();
-        $oCategoria->DeletarCategoria($_GET['registro']);
+       
     ?>
 </div>

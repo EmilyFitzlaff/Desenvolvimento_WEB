@@ -175,10 +175,13 @@
 
     function MontaSelectRegiao($array, $nomeSelect, $descricaoSelect) {
         echo "<label for='regiao'>{$descricaoSelect}</label>";
-        echo "<select name='$nomeSelect'>";
+        echo "<select name='$nomeSelect' class='form-control'>";
+        echo "<option disabled selected>Selecione uma região</option>";
         foreach ($array as $oObjeto){
             echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getNome()}</option>";
         }
         echo "</select>";
     }
+
+    
 ?>

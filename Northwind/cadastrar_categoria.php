@@ -20,7 +20,7 @@
                 ?>
                     <br>
                     <div class="alert alert-success" role="alert">
-                        Transportadora cadastrada com sucesso!
+                        Categoria cadastrada com sucesso!
                     </div>
                 <?php
             } catch (PDOException $erro) {

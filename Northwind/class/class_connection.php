@@ -20,4 +20,9 @@
             return $connection;
         }
     }
+
+    function executeQuery($sql) {
+        $stmt = Conexao::Conectar()->prepare($sql);
+        return $stmt->execute();
+    }
 ?>
