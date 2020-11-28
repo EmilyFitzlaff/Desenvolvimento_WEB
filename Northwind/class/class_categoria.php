@@ -8,7 +8,6 @@
         private $codigo;
         private $nome;
         private $descricao;
-        private $figura;
 
         public function getCodigo() {
             return $this->codigo;
