@@ -26,6 +26,9 @@
         
         $resultado = $stmt->fetchAll();   
     }
+
+    $oRegiao = new Region();
+    $oRegiao->DeletarRegiao($_GET['registro']);
 ?>
     <h1 class="titulo-principal">Tem certeza que seja excluir o registro abaixo?</h1>
     <form method="POST">
@@ -36,11 +39,6 @@
         
         <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>
     </form>
-
-    <?php 
-        $oRegiao = new Region();
-        $oRegiao->DeletarRegiao($_GET['registro']);
-    ?>
 </div>
 
 <?php } ?>

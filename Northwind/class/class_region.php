@@ -132,15 +132,16 @@
         
                    ?><br>
                     <div class="alert alert-success" role="alert">
-                        <p>Registro excluído com sucesso!</p>
+                        <span>Registro excluído com sucesso!</span>
                     </div>
                     <?php
+                    exit;
                    
                 } catch(PDOException $erro) {
                     ?>
                     <br>
                     <div class="alert alert-danger" role="alert">
-                        <p><?php echo mensagemIntegridadeBD(); ?></p>
+                        <span><?php echo mensagemIntegridadeBD(); ?></span>
                     </div>
                     <?php
                 }

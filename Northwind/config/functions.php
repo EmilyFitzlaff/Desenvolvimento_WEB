@@ -19,7 +19,7 @@
      * @return STRING 
      */
     function mensagemIntegridadeBD() {
-        return "Este registro não pode ser excluído pois está vinculado à outro e isso violará uma regra de integradade do banco de dados!";
+        return "Este registro não pode ser excluído pois está vinculado à outro e isso violará uma regra de integradade definida no banco de dados!";
     }
 
     /**
