@@ -1,10 +1,16 @@
 <?php
-    $title = "Cadastrar Território";
-
-    include_once('class/class_territory.php');
     include_once('config/functions.php');
     include_once('layout/header.php');
-    include_once('layout/menu.php');
+
+    session_start();
+
+    if($_SESSION['usuariologado'] == false) {
+        AcessoNegado();
+        $title = "Acesso Negado";
+    } else {
+        $title = "Cadastrar Território";
+        include_once('class/class_territory.php');
+        include_once('layout/menu.php');
 ?>
 
 <div class="container">
@@ -35,3 +41,5 @@
         }
     ?>
 </div>
+
+<?php } ?>
