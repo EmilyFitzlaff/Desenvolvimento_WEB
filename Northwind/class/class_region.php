@@ -28,7 +28,7 @@
          * @return Array retorna em um array todas as informações do banco de dados
          */
         private function SelectAll() {
-            $consulta = Conexao::Conectar()->prepare("SELECT * FROM region");
+            $consulta = Conexao::Conectar()->prepare("SELECT * FROM region ORDER BY region_id");
             $consulta->execute();
 
             while($aLinha = $consulta->fetch(PDO::FETCH_ASSOC)) {

@@ -1,5 +1,5 @@
 <?php
-    $title = "Excluir Região";
+    $title = "Excluir Transportadora";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -26,21 +26,19 @@
         
         $resultado = $stmt->fetchAll();   
     }
+
+    $oShipper = new Shipper();
+    $oShipper->DeletarShipper($_GET['registro']);
 ?>
     <h1 class="titulo-principal">Tem certeza que seja excluir o registro abaixo?</h1>
     <form method="POST">
         <div class="form-group">
-            <label for="nomeTransportadora">Região</label>
+            <label for="nomeTransportadora">Transportadora</label>
             <input type="text"  class="form-control" id="nomeTransportadora" name="nomeTransportadora" value="<?php echo $resultado[0]['company_name']?>" disabled>
         </div>
         
         <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>
     </form>
-
-    <?php 
-        $oShipper = new Shipper();
-        $oShipper->DeletarShipper($_GET['registro']);
-    ?>
 </div>
 
 <?php } ?>

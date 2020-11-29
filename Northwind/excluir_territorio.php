@@ -1,5 +1,5 @@
 <?php
-    $title = "Excluir Transportadora";
+    $title = "Excluir Território";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -24,6 +24,9 @@
         
         $resultado = $stmt->fetchAll();   
     }
+
+    $oTerritorio = new Territory();
+    $oTerritorio->DeletarTerritorio($_GET['registro']);
 ?>
     <h1 class="titulo-principal">Tem certeza que seja excluir o registro abaixo?</h1>
     <form method="POST">
@@ -34,11 +37,6 @@
         
         <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>
     </form>
-
-    <?php 
-        $oTerritorio = new Territory();
-        $oTerritorio->DeletarTerritorio($_GET['registro']);
-    ?>
 </div>
 
 <?php } ?>
