@@ -69,10 +69,10 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Código</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Ações</th>
+                            <th style="width: 10%">Código</th>
+                            <th style="width: 20%">Nome</th>
+                            <th style="width: 30%">Descrição</th>
+                            <th style="width: 15%">Ações</th>
                         </tr>
                     </thead>
                     <tbody>

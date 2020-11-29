@@ -16,7 +16,7 @@
 </nav>
 <br>
 <div class="container"> 
-    <div class="card">
+    <div class="card" style="max-width: 25rem; margin: 0 auto;"> 
         <div class="card-header">
             <strong>LOGIN</strong>
         </div>
@@ -35,7 +35,7 @@
                         Usuário ou senha inválido(s)!
                     </div>
                 <?php } ?>
-                <button type="submit" class="btn btn-primary" value="entrar" name="acao">Entrar</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" value="entrar" name="acao">Entrar</button>
             </form>
         </div>
     </div>
