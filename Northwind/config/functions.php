@@ -28,7 +28,7 @@
 
     function AcessoNegado() {
         ?>
-        <div class="card w-50" style="margin: 10px;">
+        <div class="container" style="margin: 10px;">
             <div class="card-body">
                 <h5 class="card-title text-danger">ACESSO NEGADO!</h5>
                 <p class="card-text">Para acessar esta página é necessário que o usuário esteja logado.</p>

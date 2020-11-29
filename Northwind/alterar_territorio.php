@@ -9,7 +9,8 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        include_once('class/class_territory.php');    
+        include_once('class/class_territory.php');  
+        include_once('class/class_region.php');    
         include_once('layout/menu.php');
 ?>
 
@@ -40,9 +41,19 @@
             <?php 
                 $oRegiao = new Region;
                 $aDados = $oRegiao->returnSelectAll();
-
-                MontaSelectRegiao($aDados, "regiao", "Região"); 
             ?>
+            <label for='regiao'>Região</label>
+            <select name='regiao' class='form-control'>
+            <?php
+                foreach ($aDados as $oObjeto){
+                    if($oObjeto->getCodigo() == $_GET['regiao']) {
+                        echo "<option value='{$oObjeto->getCodigo()}' selected>{$oObjeto->getNome()}</option>";
+                    } else {
+                        echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getNome()}</option>";
+                    }
+                }
+            ?>
+            </select>
         </div>
         
         <button type="submit" class="btn btn-primary" name="alterar">Alterar</button>
