@@ -1,17 +1,24 @@
 <?php
-
-    $title = "Excluir Categoria";
-
-    include_once('class/class_categoria.php');
     include_once('config/functions.php');
     include_once('layout/header.php');
-    include_once('layout/menu.php');
+
+    session_start();
+
+    if($_SESSION['usuariologado'] == false) {
+        AcessoNegado();
+        $title = "Acesso Negado";
+    } else {
+        $title = "Excluir Categoria";
+        include_once('class/class_categoria.php');
+        include_once('layout/menu.php');
 ?>
 
 <div class="container">
 <?php     
     if (isset($_GET['registro'])) {
-        $stmt = Conexao::Conectar()->prepare("SELECT * FROM categories WHERE category_id = :id");
+        $stmt = Conexao::Conectar()->prepare("SELECT * 
+                                                FROM categories 
+                                               WHERE category_id = :id");
 
         $stmt->bindParam(':id', $_GET['registro']);
 
@@ -32,8 +39,6 @@
         
         <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>
     </form>
-
-    <?php 
-       
-    ?>
 </div>
+
+<?php } ?>

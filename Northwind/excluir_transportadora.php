@@ -1,17 +1,25 @@
 <?php
 
-    $title = "Excluir Região";
-
-    include_once('class/class_shipper.php');
     include_once('config/functions.php');
     include_once('layout/header.php');
-    include_once('layout/menu.php');
+
+    session_start();
+
+    if($_SESSION['usuariologado'] == false) {
+        AcessoNegado();
+        $title = "Acesso Negado";
+    } else {
+        $title = "Excluir Região";
+        include_once('class/class_shipper.php');
+        include_once('layout/menu.php');
 ?>
 
 <div class="container">
 <?php     
     if (isset($_GET['registro'])) {
-        $stmt = Conexao::Conectar()->prepare("SELECT * FROM shippers WHERE shipper_id = :id");
+        $stmt = Conexao::Conectar()->prepare("SELECT * 
+                                                FROM shippers 
+                                               WHERE shipper_id = :id");
 
         $stmt->bindParam(':id', $_GET['registro']);
 
@@ -35,3 +43,5 @@
         $oShipper->DeletarShipper($_GET['registro']);
     ?>
 </div>
+
+<?php } ?>

@@ -1,6 +1,8 @@
 <?php
+
     include_once('config/functions.php');
     include_once('layout/header.php');
+
     session_start();
 
     if($_SESSION['usuariologado'] == false) {
