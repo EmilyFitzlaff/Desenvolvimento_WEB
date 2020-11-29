@@ -1,5 +1,5 @@
 <?php
-
+    $title = "Consultar Transportadoras";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -9,7 +9,6 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        $title = "Consultar Transportadoras";
         include_once('class/class_shipper.php');
         include_once('layout/menu.php');
 ?>

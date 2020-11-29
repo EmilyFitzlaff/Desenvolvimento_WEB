@@ -1,5 +1,5 @@
 <?php
-
+    $title = "Excluir Transportadora";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -8,8 +8,7 @@
     if($_SESSION['usuariologado'] == false) {
         AcessoNegado();
         $title = "Acesso Negado";
-    } else {
-        $title = "Excluir Transportadora";
+    } else {        
         include_once('class/class_territory.php');
         include_once('layout/menu.php');
 ?>

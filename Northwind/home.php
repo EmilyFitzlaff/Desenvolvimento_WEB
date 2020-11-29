@@ -1,5 +1,5 @@
-<?php
-
+<?php  
+    $title = "Página Inicial";    
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -9,7 +9,7 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        $title = "Página Inicial";       
+           
         include_once('layout/menu.php');
 ?>
 

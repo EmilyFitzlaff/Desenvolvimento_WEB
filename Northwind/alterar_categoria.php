@@ -1,6 +1,7 @@
 <?php
+    $title = "Alterar Categoria";
     include_once('config/functions.php');
-    include_once('layout/header.php');
+    include_once('layout/header.php'); 
 
     session_start();
 
@@ -8,7 +9,6 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        $title = "Alterar Categoria";
         include_once('class/class_categoria.php');    
         include_once('layout/menu.php');
 ?>

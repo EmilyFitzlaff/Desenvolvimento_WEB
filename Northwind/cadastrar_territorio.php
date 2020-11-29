@@ -1,4 +1,5 @@
 <?php
+    $title = "Cadastrar Território";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -8,7 +9,6 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        $title = "Cadastrar Território";
         include_once('class/class_territory.php');
         include_once('layout/menu.php');
 ?>

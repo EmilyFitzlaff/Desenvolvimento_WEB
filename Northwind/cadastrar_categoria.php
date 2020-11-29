@@ -1,4 +1,5 @@
 <?php
+    $title = "Cadastrar Categoria";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -7,8 +8,7 @@
     if($_SESSION['usuariologado'] == false) {
         AcessoNegado();
         $title = "Acesso Negado";
-    } else {
-        $title = "Cadastrar Categoria";
+    } else {        
         include_once('class/class_categoria.php');
         include_once('layout/menu.php');
 ?>

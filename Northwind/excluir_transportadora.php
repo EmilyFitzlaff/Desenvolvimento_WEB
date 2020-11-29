@@ -1,5 +1,5 @@
 <?php
-
+    $title = "Excluir Região";
     include_once('config/functions.php');
     include_once('layout/header.php');
 
@@ -9,7 +9,6 @@
         AcessoNegado();
         $title = "Acesso Negado";
     } else {
-        $title = "Excluir Região";
         include_once('class/class_shipper.php');
         include_once('layout/menu.php');
 ?>
