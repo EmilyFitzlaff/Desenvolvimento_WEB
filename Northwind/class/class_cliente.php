@@ -101,5 +101,27 @@
         public function setFax($fax) {
             $this->fax = $fax;
         }
+
+        private function SelectAll() {
+            $consulta = Conexao::Conectar()->prepare("SELECT * FROM customers");
+            $consulta->execute();
+
+            while($aLinha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+                $oCliente = new Cliente;
+                $oCliente->setCodigo($aLinha['customer_id']);
+                $oCliente->setCompanyName($aLinha['company_name']);
+                $oCliente->setContactName($aLinha['contact_name']);
+                $oCliente->setContactTitle($aLinha['contact_title']);
+                $oCliente->setAddress($aLinha['address']);
+                $oCliente->setCity($aLinha['city']);
+                $oCliente->setRegion($aLinha['region']);
+                $oCliente->setPostalCode($aLinha['postal_code']);
+                $oCliente->setCountry($aLinha['country']);
+                $oCliente->setPhone($aLinha['phone']);
+                $oCliente->setFax($aLinha['fax']);
+                $aResultado[] = $oCliente;
+            }
+            return $aResultado;  
+        }
     }
 ?>
