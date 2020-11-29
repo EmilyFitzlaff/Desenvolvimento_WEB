@@ -1,14 +1,42 @@
 <?php
-    $title = "Página Inicial";
+    $title = "Login";
 
+    include_once('class/class_connection.php');
     include_once('config/functions.php');
     include_once('layout/header.php');
-    include_once('layout/menu.php');
+
+    $_SESSION['usuariologado'] = false;
 ?>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Northwind</h1>
-        <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Northwind</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<br>
+<div class="container"> 
+    <div class="card">
+        <div class="card-header">
+            <strong>LOGIN</strong>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="autenticacao.php">
+                <div class="form-group">
+                    <label for="login">Código de Login</label>
+                    <input type="number" class="form-control" id="login" placeholder="Informe seu login" name="login" required maxlength="15">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" placeholder="*********" name="senha" required>
+                </div>
+                <?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+                    <div class="text-danger">
+                        Usuário ou senha inválido(s)!
+                    </div>
+                <?php } ?>
+                <button type="submit" class="btn btn-primary" value="entrar" name="acao">Entrar</button>
+            </form>
+        </div>
     </div>
 </div>

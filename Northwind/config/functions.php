@@ -7,7 +7,8 @@
      * @return INT retorna o código do último elemento cadastrado no BD
      */
     function getMaxID($id_coluna, $nome_tabela) {
-        $consulta = Conexao::Conectar()->query("SELECT MAX($id_coluna) FROM $nome_tabela");
+        $consulta = Conexao::Conectar()->query("SELECT MAX($id_coluna) 
+                                                  FROM $nome_tabela");
 
         $max = $consulta->fetch(PDO::FETCH_ASSOC);
 
@@ -19,5 +20,21 @@
      */
     function mensagemIntegridadeBD() {
         return "Este registro não pode ser excluído pois está vinculado à outro e isso violará uma regra de integradade do banco de dados!";
+    }
+
+    /**
+     * @return HTML texto contendo informações sobre o acesso negado e redirecionamento ao index
+     */
+
+    function AcessoNegado() {
+        ?>
+        <div class="card w-50" style="margin: 10px;">
+            <div class="card-body">
+                <h5 class="card-title text-danger">ACESSO NEGADO!</h5>
+                <p class="card-text">Para acessar esta página é necessário que o usuário esteja logado.</p>
+                <a href="index.php" class="btn btn-primary">EFETUAR LOGIN</a>
+            </div>
+        </div>
+        <?php
     }
 ?>
