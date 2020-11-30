@@ -1,11 +1,15 @@
 <?php
     $title = "Login";
-
+    session_start();
     include_once('class/class_connection.php');
     include_once('config/functions.php');
     include_once('layout/header.php');
 
     $_SESSION['usuariologado'] = false;
+
+    if(isset($_GET['acao']) && $_GET['acao'] == 'sair') {
+        session_destroy();
+    }
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
