@@ -15,7 +15,7 @@
 
 <div class="container">
     <h1 class="titulo-principal"><?php echo $title; ?></h1>
-    <p>Clique sobre o nome do cliente para obter mais informações!</p>
+    <p>Clique sobre o nome do cliente para visualizar mais informações!</p>
 
     <?php
         $oCliente = new Cliente;

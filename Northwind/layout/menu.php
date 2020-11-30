@@ -25,7 +25,8 @@
                     <a class="dropdown-item" href="regiao.php">Regiões</a>   
                     <a class="dropdown-item" href="territorio.php">Territórios</a>    
                     <a class="dropdown-item" href="transportadora.php">Transportadoras</a> 
-                    <a class="dropdown-item" href="categoria.php">Categorias</a>              
+                    <a class="dropdown-item" href="categoria.php">Categorias</a>     
+                    <a class="dropdown-item" href="cliente.php">Clientes</a>            
                 </div>
             </li>
         </ul>
