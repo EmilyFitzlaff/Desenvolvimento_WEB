@@ -24,3 +24,12 @@ label {
     width: 500px;
 }
 
+.gray {
+    border: 1px solid rgba(0,0,0,.5);
+}
+
+.th-first {
+    text-align: right;
+    width: 20%;
+}
+
