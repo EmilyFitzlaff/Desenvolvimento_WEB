@@ -28,7 +28,12 @@
                     <a class="dropdown-item" href="categoria.php">Categorias</a>     
                     <a class="dropdown-item" href="cliente.php">Clientes</a>            
                 </div>
-            </li>
+            </li>          
         </ul>
     </div>
+    <div class="float-right" style="color: rgba(255,255,255,.8);">
+        <a class="btn btn-primary" href="index.php?acao=sair">
+            Sair
+        </a>
+    </div>        
 </nav>
